@@ -29,8 +29,8 @@ public class User implements Serializable {
     /**
      * 用户密码
      */
-    @TableField("Passworld")
-    private String Passworld;
+    @TableField("Password")
+    private String Password;
 
     /**
      * 用户类别
