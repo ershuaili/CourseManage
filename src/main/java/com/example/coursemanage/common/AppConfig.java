@@ -39,7 +39,6 @@ public class AppConfig extends WebMvcConfigurationSupport {
 
     /**
      * 分页插件
-     * @return
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
@@ -80,16 +79,14 @@ public class AppConfig extends WebMvcConfigurationSupport {
 
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         objectMapper.disable(DeserializationFeature.ADJUST_DATES_TO_CONTEXT_TIME_ZONE);
-//        objectMapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
-        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL); //忽略 null 字段
+        //忽略 null 字段
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
         JavaTimeModule javaTimeModule = new JavaTimeModule();
 
         javaTimeModule.addSerializer(LocalDateTime.class, new LocalDateTimeSerializer(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         javaTimeModule.addSerializer(LocalDate.class, new LocalDateSerializer(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
 
-//        javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-//        javaTimeModule.addDeserializer(LocalDate.class, new LocalDateDeserializer(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         objectMapper.registerModule(javaTimeModule);
         converters.add(new MappingJackson2HttpMessageConverter(objectMapper));
     }
