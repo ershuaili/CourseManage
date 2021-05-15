@@ -47,8 +47,9 @@ public class AppConfig extends WebMvcConfigurationSupport {
         paginationInterceptor.setCountSqlParser(new JsqlParserCountOptimize(true));
         return paginationInterceptor;
     }
+
     @Bean
-    FilterRegistrationBean<CorsFilter> cors(){
+    FilterRegistrationBean<CorsFilter> cors() {
         FilterRegistrationBean<CorsFilter> registrationBean = new FilterRegistrationBean<CorsFilter>();
         CorsConfiguration config = new CorsConfiguration();
 
@@ -70,6 +71,7 @@ public class AppConfig extends WebMvcConfigurationSupport {
 
     /**
      * curl http://127.0.0.1/user/getById?id=31
+     *
      * @param converters
      */
 
