@@ -20,7 +20,7 @@ public class DefaultExceptionHandler {
     @ExceptionHandler
     public CommonResult exceptionHandler(HttpServletRequest request, Exception ex) {
         ex.printStackTrace();
-        if(ex instanceof NoHandlerFoundException) {
+        if (ex instanceof NoHandlerFoundException) {
             return CommonResult.nohandler();
         }
         return CommonResult.failed(ex.getMessage());
