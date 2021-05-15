@@ -21,10 +21,6 @@ import java.util.regex.Pattern;
 @Configuration
 public class DateConverter implements Converter<String, Date> {
 
-    public DateConverter() {
-//        System.out.println("初始化........");
-    }
-
     static List<SimpleDateFormat> sdfs = new ArrayList();
 
     static {
@@ -35,19 +31,20 @@ public class DateConverter implements Converter<String, Date> {
 
     }
 
+    public DateConverter() {
+//        System.out.println("初始化........");
+    }
+
     @Override
     public Date convert(String s) {
         SimpleDateFormat sdf = null;
         if (Pattern.matches("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}$", s)) {
             sdf = sdfs.get(1);
-        }
-        else if (Pattern.matches("^\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}$", s)){
+        } else if (Pattern.matches("^\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}$", s)) {
             sdf = sdfs.get(0);
-        }
-        else if (Pattern.matches("^\\d{4}/\\d{2}/\\d{2}$", s)){
+        } else if (Pattern.matches("^\\d{4}/\\d{2}/\\d{2}$", s)) {
             sdf = sdfs.get(3);
-        }
-        else if (Pattern.matches("^\\d{4}-\\d{2}/-\\d{2}}$", s)){
+        } else if (Pattern.matches("^\\d{4}-\\d{2}/-\\d{2}}$", s)) {
             sdf = sdfs.get(2);
         }
 

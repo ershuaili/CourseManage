@@ -10,7 +10,7 @@ import lombok.Getter;
  * @Date 2021/05/14 下午 9:00
  */
 @Getter
-public class CommonResult  {
+public class CommonResult {
     private Integer code;
     private String message;
     private Object obj;
@@ -22,21 +22,26 @@ public class CommonResult  {
     }
 
     public static CommonResult nohandler() {
-        return new CommonResult(ResultCode.NOHANDLER.getCode(), ResultCode.NOHANDLER.getMessage(),null);
+        return new CommonResult(ResultCode.NOHANDLER.getCode(), ResultCode.NOHANDLER.getMessage(), null);
     }
+
     public static CommonResult success(Object data) {
-        return new CommonResult(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(),data);
+        return new CommonResult(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), data);
     }
+
     public static CommonResult failed() {
-        return new CommonResult(ResultCode.FAILED.getCode(), ResultCode.FAILED.getMessage(),null);
+        return new CommonResult(ResultCode.FAILED.getCode(), ResultCode.FAILED.getMessage(), null);
     }
+
     public static CommonResult failed(String message) {
-        return new CommonResult(ResultCode.FAILED.getCode(),message,null);
+        return new CommonResult(ResultCode.FAILED.getCode(), message, null);
     }
+
     public static CommonResult notoken() {
-        return new CommonResult(ResultCode.NOTOKEN.getCode(), ResultCode.NOTOKEN.getMessage(),null);
+        return new CommonResult(ResultCode.NOTOKEN.getCode(), ResultCode.NOTOKEN.getMessage(), null);
     }
+
     public static CommonResult nopremiss() {
-        return new CommonResult(ResultCode.NOPERMISS.getCode(), ResultCode.NOPERMISS.getMessage(),null);
+        return new CommonResult(ResultCode.NOPERMISS.getCode(), ResultCode.NOPERMISS.getMessage(), null);
     }
 }

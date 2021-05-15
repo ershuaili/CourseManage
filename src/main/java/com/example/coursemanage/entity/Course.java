@@ -1,13 +1,14 @@
 package com.example.coursemanage.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
+
 /**
  * <p>
- * 
+ * Course实体类
  * </p>
  *
  * @author shuai
