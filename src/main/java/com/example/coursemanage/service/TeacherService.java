@@ -1,11 +1,11 @@
 package com.example.coursemanage.service;
 
-import com.example.coursemanage.entity.Teacher;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.coursemanage.entity.Teacher;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author shuai

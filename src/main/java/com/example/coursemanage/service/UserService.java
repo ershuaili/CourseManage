@@ -1,12 +1,12 @@
 package com.example.coursemanage.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.example.coursemanage.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.coursemanage.entity.User;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
  * @author shuai

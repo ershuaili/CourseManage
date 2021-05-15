@@ -8,14 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
  * @author shuai
@@ -30,6 +29,7 @@ public class UserController {
 
     /**
      * 查找
+     *
      * @return
      */
     @RequestMapping("/list")
@@ -41,7 +41,7 @@ public class UserController {
     }
 
     @RequestMapping("/save")
-    CommonResult save(User user){
+    CommonResult save(User user) {
 
         return CommonResult.success(userService.saveOrUpdate(user));
 
@@ -50,6 +50,7 @@ public class UserController {
 
     /**
      * 根据id查
+     *
      * @param id
      * @return
      */
@@ -60,11 +61,12 @@ public class UserController {
 
     /**
      * 删除，逻辑删除
+     *
      * @param id
      * @return
      */
     @RequestMapping("/del")
-    CommonResult del(Integer id ) {
+    CommonResult del(Integer id) {
         User user = userService.getById(id);
         user.setUserID("0");
         return CommonResult.success(userService.updateById(user));
@@ -73,6 +75,7 @@ public class UserController {
 
     /**
      * 批量删除
+     *
      * @param id
      * @return
      */
