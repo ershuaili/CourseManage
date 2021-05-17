@@ -1,23 +1,24 @@
 package com.coursemanage.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author shuai
  * @since 2021-05-17
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
+@AllArgsConstructor
+@NoArgsConstructor
 public class Course implements Serializable {
-
-    private static final long serialVersionUID = 1L;
 
     /**
      * 课程号
