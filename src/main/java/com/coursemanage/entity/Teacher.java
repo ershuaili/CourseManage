@@ -1,19 +1,19 @@
 package com.coursemanage.entity;
 
+import java.time.LocalDate;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
-import java.time.LocalDate;
-
 /**
  * <p>
- * Teacher实体类
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-14
+ * @since 2021-05-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -24,28 +24,26 @@ public class Teacher implements Serializable {
     /**
      * 教工号
      */
-    @TableId("teacherID")
-    private String teacherID;
-
-    /**
-     * 教师登陆密码
-     */
-    private String pass;
+    @TableId("Tno")
+    private String Tno;
 
     /**
      * 教师姓名
      */
-    private String name;
+    @TableField("Tname")
+    private String Tname;
 
     /**
      * 教师性别
      */
-    private Boolean sex;
+    @TableField("Tsex")
+    private String Tsex;
 
     /**
      * 教师年龄
      */
-    private LocalDate age;
+    @TableField("Tage")
+    private LocalDate Tage;
 
 
 }

@@ -1,8 +1,8 @@
 package com.coursemanage.service.impl;
 
-import com.coursemanage.entity.Teacher;
-import com.coursemanage.mapper.TeacherMapper;
-import com.coursemanage.service.TeacherService;
+import com.coursemanage.entity.Sc;
+import com.coursemanage.mapper.ScMapper;
+import com.coursemanage.service.ScService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2021-05-17
  */
 @Service
-public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> implements TeacherService {
+public class ScServiceImpl extends ServiceImpl<ScMapper, Sc> implements ScService {
 
 }

@@ -1,19 +1,19 @@
 package com.coursemanage.entity;
 
+import java.time.LocalDate;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
-import java.time.LocalDate;
-
 /**
  * <p>
- * Student实体类
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-14
+ * @since 2021-05-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -22,30 +22,34 @@ public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 学生ID
+     * 学号
      */
-    @TableId("studentID")
-    private String studentID;
-
-    /**
-     * 学生账户密码
-     */
-    private String pass;
+    @TableId("Sno")
+    private String Sno;
 
     /**
      * 学生姓名
      */
-    private String name;
+    @TableField("Sname")
+    private String Sname;
 
     /**
      * 学生性别
      */
-    private Boolean sex;
+    @TableField("Ssex")
+    private String Ssex;
 
     /**
      * 学生年龄
      */
-    private LocalDate age;
+    @TableField("Sage")
+    private LocalDate Sage;
+
+    /**
+     * 班级编号
+     */
+    @TableField("Clno")
+    private String Clno;
 
 
 }

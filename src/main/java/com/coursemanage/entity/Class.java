@@ -1,18 +1,18 @@
 package com.coursemanage.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
-
 /**
  * <p>
- * Class实体类
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-14
+ * @since 2021-05-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -23,18 +23,20 @@ public class Class implements Serializable {
     /**
      * 班级号
      */
-    @TableId("classId")
-    private Integer classId;
-
-    /**
-     * 班级人数
-     */
-    private Integer number;
+    @TableId("Clno")
+    private String Clno;
 
     /**
      * 班级专业
      */
-    private String profession;
+    @TableField("Cdiscipline")
+    private String Cdiscipline;
+
+    /**
+     * 班级人数
+     */
+    @TableField("Cnumber")
+    private String Cnumber;
 
 
 }

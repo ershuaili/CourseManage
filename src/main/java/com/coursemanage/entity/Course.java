@@ -1,18 +1,17 @@
 package com.coursemanage.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.io.Serializable;
-
 /**
  * <p>
- * Course实体类
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-14
+ * @since 2021-05-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -23,18 +22,26 @@ public class Course implements Serializable {
     /**
      * 课程号
      */
-    @TableId("courseId")
-    private Integer courseId;
+    @TableField("Cno")
+    private String Cno;
 
     /**
      * 课程名
      */
-    private String name;
+    @TableField("Cname")
+    private String Cname;
+
+    /**
+     * 执教老师
+     */
+    @TableField("Cteacher")
+    private String Cteacher;
 
     /**
      * 学分
      */
-    private Integer score;
+    @TableField("Ccredit")
+    private String Ccredit;
 
 
 }

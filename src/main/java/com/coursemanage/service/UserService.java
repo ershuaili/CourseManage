@@ -1,17 +1,16 @@
 package com.coursemanage.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.coursemanage.entity.User;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * 服务类
+ *  服务类
  * </p>
  *
  * @author shuai
- * @since 2021-05-14
+ * @since 2021-05-17
  */
 public interface UserService extends IService<User> {
-    Page pageList(Page page, User user);
+
 }

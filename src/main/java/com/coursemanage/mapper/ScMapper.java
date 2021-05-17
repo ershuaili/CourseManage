@@ -1,16 +1,16 @@
 package com.coursemanage.mapper;
 
+import com.coursemanage.entity.Sc;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.coursemanage.entity.Admin;
 
 /**
  * <p>
- * Mapper 接口
+ *  Mapper 接口
  * </p>
  *
  * @author shuai
- * @since 2021-05-14
+ * @since 2021-05-17
  */
-public interface AdminMapper extends BaseMapper<Admin> {
+public interface ScMapper extends BaseMapper<Sc> {
 
 }
