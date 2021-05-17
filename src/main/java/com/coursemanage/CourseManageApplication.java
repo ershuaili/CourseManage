@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author shuai
  */
-@MapperScan("com.example.coursemanage.mapper")
+@MapperScan("com.coursemanage.mapper")
 @SpringBootApplication
 public class CourseManageApplication {
 
