@@ -19,7 +19,7 @@ public class LoginController {
             @RequestParam("password") String password,
             Model model, HttpSession session){
         //具体的业务
-        if(!StringUtils.isEmpty(username)&&"123456".equals(password)){
+        if(!StringUtils.isEmpty(username)&& "123456".equals(password)){
             session.setAttribute("loginUser",username);
             return "redirect:/main.html";
         }
