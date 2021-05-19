@@ -9,6 +9,7 @@ import java.util.Locale;
 
 /**
  * 可以在链接上携带区域信息
+ * @author shuai
  */
 public class MyLocaleResolver implements LocaleResolver {
 
