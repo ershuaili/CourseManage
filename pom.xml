@@ -20,11 +20,23 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--shiro整合Spring的包-->
+        <dependency>
+            <groupId>com.github.hiwepy</groupId>
+            <artifactId>shiro-dingtalk-spring-boot-starter</artifactId>
+            <version>1.0.2.RELEASE</version>
         </dependency>
 
         <!--引入security-->

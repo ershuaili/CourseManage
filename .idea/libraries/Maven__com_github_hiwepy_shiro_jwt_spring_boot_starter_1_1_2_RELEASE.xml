@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.hiwepy:shiro-jwt-spring-boot-starter:1.1.2.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/Maven/MyLocalRepository/com/github/hiwepy/shiro-jwt-spring-boot-starter/1.1.2.RELEASE/shiro-jwt-spring-boot-starter-1.1.2.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Maven/MyLocalRepository/com/github/hiwepy/shiro-jwt-spring-boot-starter/1.1.2.RELEASE/shiro-jwt-spring-boot-starter-1.1.2.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Maven/MyLocalRepository/com/github/hiwepy/shiro-jwt-spring-boot-starter/1.1.2.RELEASE/shiro-jwt-spring-boot-starter-1.1.2.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

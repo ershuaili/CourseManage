@@ -3,7 +3,6 @@ package com.coursemanage.controller;
 import com.coursemanage.entity.User;
 import com.coursemanage.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -25,7 +24,7 @@ public class UserController {
         return userMapper.queryUserList();
     }
 
-    public User queryUserById(){
-        return userMapper.queryUserById("122");
+    public User queryUserByName(){
+        return userMapper.queryUserByName("122");
     }
 }

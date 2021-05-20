@@ -1,11 +1,9 @@
 package com.coursemanage;
 
+import com.coursemanage.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import javax.sql.DataSource;
-import java.sql.SQLException;
 
 /**
  * Created by IntelliJ IDEA.
@@ -18,11 +16,10 @@ import java.sql.SQLException;
 public class test {
 
     @Autowired
-    DataSource dataSource;
+    UserService userService;
 
     @Test
-    void contextLoads() throws SQLException {
-        dataSource.getClass();
-        System.out.println(dataSource.getConnection());
+    void contextLoads() {
+        System.out.println(userService.queryUserByName("1"));
     }
 }

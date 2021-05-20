@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.hiwepy:jwt-issuer-api:1.0.6.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/Maven/MyLocalRepository/com/github/hiwepy/jwt-issuer-api/1.0.6.RELEASE/jwt-issuer-api-1.0.6.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Maven/MyLocalRepository/com/github/hiwepy/jwt-issuer-api/1.0.6.RELEASE/jwt-issuer-api-1.0.6.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Maven/MyLocalRepository/com/github/hiwepy/jwt-issuer-api/1.0.6.RELEASE/jwt-issuer-api-1.0.6.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

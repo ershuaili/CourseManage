@@ -25,8 +25,8 @@ public interface UserMapper {
 
     /**
      * 通过id获取用户
-     * @param id
-     * @return
+     * @param name
+     * @return user
      */
-    User queryUserById(String id);
+    User queryUserByName(String name);
 }
