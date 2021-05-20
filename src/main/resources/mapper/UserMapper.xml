@@ -4,13 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--绑定一个Mapper接口-->
-<mapper namespace="com.glp.dao.UserMapper" >
+<mapper namespace="com.coursemanage.mapper.UserMapper" >
     <!--id对应接口方法-->
     <select id="queryUserList" resultType="User">
         select * from user;
     </select>
 
-    <select id="queryUserById" resultType="User">
-        select * from user where Username = #{id}
+    <select id="queryUserByName" resultType="User">
+        select * from user where Username = #{name}
     </select>
+
 </mapper>
