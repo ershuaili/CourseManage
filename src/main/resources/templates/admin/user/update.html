@@ -11,10 +11,10 @@
 
     <title>Dashboard Template for Bootstrap</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/static/css/bootstrap.min.css}">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+    <link rel="stylesheet" th:href="@{/static/css/dashboard.css}">
     <style type="text/css">
         /* Chart.js */
 
@@ -55,35 +55,37 @@
         <div th:replace="~{commons/commons::sidebar(active='list.html')}"></div>
 
         <main class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4" role="main">
-            <h2><a class="btn btn-sm btn-success" th:href="@{/templates/user}">添加员工</a></h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                    <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>lastName</th>
-                        <th>email</th>
-                        <th>gender</th>
-                        <th>department</th>
-                        <th>birth</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr th:each="emp:${emps}">
-                        <td th:text="${emp.getId()}"></td>
-                        <td th:text="${emp.getLastName()}"></td>
-                        <td th:text="${emp.getEmail()}"></td>
-                        <td th:text="${emp.getGender()==0?'女':'男'}"></td>
-                        <td th:text="${emp.department.getDepartmentName()}"></td>
-                        <td th:text="${#dates.format(emp.getBirth(),'yyyy-MM-dd HH:mm:ss')}"></td>
-                        <td>
-                            <a class="btn btn-sm btn-primary" th:href="@{/templates/user/}+${emp.getId()}">编辑</a>
-                            <a class="btn btn-sm btn-danger" th:href="@{/delEmp/}+${emp.getId()}">删除</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            <form method="post" th:action="@{/templates/admin/user}">
+                <input name="id" th:value="${emp.getId()}" type="hidden">
+                <div class="form-group"><label>LastName</label>
+                    <input class="form-control" name="lastName" placeholder="kuangshen" th:value="${emp.getLastName()}" type="text">
+                </div>
+                <div class="form-group"><label>Email</label>
+                    <input class="form-control" name="email" placeholder="24736743@qq.com" th:value="${emp.getEmail()}" type="email">
+                </div>
+                <div class="form-group"><label>Gender</label><br/>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="gender" th:checked="${emp.getGender()==1}" type="radio" value="1">
+                        <label class="form-check-label">男</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="gender" th:checked="${emp.getGender()==0}" type="radio" value="0">
+                        <label class="form-check-label">女</label>
+                    </div>
+                </div>
+                <div class="form-group"><label>department</label>
+                    <select class="form-control" name="department.id">
+                        <option th:each="dept:${departments}" th:selected="${dept.id==emp.getDepartment().getId()}"
+                                th:text="${dept.getDepartmentName()}" th:value="${dept.getId()}"></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Birth</label>
+                    <input class="form-control" name="birth" placeholder="2021-02-02" th:value="${#dates.format(emp.birth,'yyyy-MM-dd HH:mm')}"
+                           type="text">
+                </div>
+                <button class="btn btn-primary" type="submit">修改</button>
+            </form>
         </main>
     </div>
 </div>
