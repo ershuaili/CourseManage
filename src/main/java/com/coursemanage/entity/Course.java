@@ -22,25 +22,25 @@ public class Course {
      * 课程号
      */
     @TableField("Cno")
-    private String Cno;
+    private String cno;
 
     /**
      * 课程名
      */
     @TableField("Cname")
-    private String Cname;
+    private String cname;
 
     /**
      * 执教老师
      */
     @TableField("Cteacher")
-    private String Cteacher;
+    private String cteacher;
 
     /**
      * 学分
      */
     @TableField("Ccredit")
-    private String Ccredit;
+    private String ccredit;
 
 
 }

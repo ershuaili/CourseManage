@@ -23,19 +23,19 @@ public class Class {
      * 班级号
      */
     @TableId("Clno")
-    private String Clno;
+    private String clno;
 
     /**
      * 班级专业
      */
     @TableField("Cdiscipline")
-    private String Cdiscipline;
+    private String cdiscipline;
 
     /**
      * 班级人数
      */
     @TableField("Cnumber")
-    private String Cnumber;
+    private String cnumber;
 
 
 }

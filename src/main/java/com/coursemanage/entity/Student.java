@@ -31,25 +31,25 @@ public class Student {
      * 学生姓名
      */
     @TableField("Sname")
-    private String Sname;
+    private String sname;
 
     /**
      * 学生性别
      */
     @TableField("Ssex")
-    private String Ssex;
+    private String ssex;
 
     /**
      * 学生年龄
      */
     @TableField("Sage")
-    private LocalDate Sage;
+    private LocalDate sage;
 
     /**
      * 班级编号
      */
     @TableField("Clno")
-    private String Clno;
+    private String clno;
 
 
 }

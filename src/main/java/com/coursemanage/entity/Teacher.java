@@ -22,22 +22,22 @@ public class Teacher {
     /**
      * 教工号
      */
-    private String Tno;
+    private String tno;
 
     /**
      * 教师姓名
      */
-    private String Tname;
+    private String tname;
 
     /**
      * 教师性别
      */
-    private String Tsex;
+    private String tsex;
 
     /**
      * 教师年龄
      */
-    private LocalDate Tage;
+    private LocalDate tage;
 
 
 }
