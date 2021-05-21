@@ -3,24 +3,18 @@ package com.coursemanage.service.impl;
 import com.coursemanage.entity.User;
 import com.coursemanage.mapper.UserMapper;
 import com.coursemanage.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by IntelliJ IDEA.
+ * <p>
+ *  服务实现类
+ * </p>
  *
- * @author 李二帅
- * @version 1.0
- * @Date 2021/05/20 下午 7:13
+ * @author shuai
+ * @since 2021-05-21
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
-    @Autowired
-    UserMapper userMapper;
-
-    @Override
-    public User queryUserByName(String name) {
-        return userMapper.queryUserByName(name);
-    }
 }

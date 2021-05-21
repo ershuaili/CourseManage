@@ -1,11 +1,9 @@
 package com.coursemanage.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * <p>
@@ -13,11 +11,10 @@ import java.io.Serializable;
  * </p>
  *
  * @author shuai
- * @since 2021-05-20
+ * @since 2021-05-21
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 public class Sc implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -26,19 +23,19 @@ public class Sc implements Serializable {
      * 学号
      */
     @TableField("Sno")
-    private String sno;
+    private String Sno;
 
     /**
      * 课程号
      */
     @TableField("Cno")
-    private String cno;
+    private String Cno;
 
     /**
      * 成绩
      */
     @TableField("Grader")
-    private Integer grader;
+    private Integer Grader;
 
 
 }

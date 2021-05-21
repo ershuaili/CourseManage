@@ -1,7 +1,7 @@
 package com.coursemanage.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.coursemanage.entity.Student;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.coursemanage.entity.Student;
  * </p>
  *
  * @author shuai
- * @since 2021-05-20
+ * @since 2021-05-21
  */
 public interface StudentMapper extends BaseMapper<Student> {
 

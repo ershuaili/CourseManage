@@ -1,41 +1,42 @@
 package com.coursemanage.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-17
+ * @since 2021-05-21
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Class {
+@EqualsAndHashCode(callSuper = false)
+public class Class implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * 班级号
      */
     @TableId("Clno")
-    private String clno;
+    private String Clno;
 
     /**
      * 班级专业
      */
     @TableField("Cdiscipline")
-    private String cdiscipline;
+    private String Cdiscipline;
 
     /**
      * 班级人数
      */
     @TableField("Cnumber")
-    private String cnumber;
+    private String Cnumber;
 
 
 }

@@ -1,15 +1,16 @@
 package com.coursemanage.service;
 
 import com.coursemanage.entity.User;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
- * Created by IntelliJ IDEA.
+ * <p>
+ *  服务类
+ * </p>
  *
- * @author 李二帅
- * @version 1.0
- * @Date 2021/05/20 下午 7:13
+ * @author shuai
+ * @since 2021-05-21
  */
-public interface UserService {
+public interface UserService extends IService<User> {
 
-    User queryUserByName(String name);
 }

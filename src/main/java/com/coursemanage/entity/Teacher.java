@@ -1,43 +1,49 @@
 package com.coursemanage.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-17
+ * @since 2021-05-21
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Teacher {
+@EqualsAndHashCode(callSuper = false)
+public class Teacher implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     /**
      * 教工号
      */
-    private String tno;
+    @TableId("Tno")
+    private String Tno;
 
     /**
      * 教师姓名
      */
-    private String tname;
+    @TableField("Tname")
+    private String Tname;
 
     /**
      * 教师性别
      */
-    private String tsex;
+    @TableField("Tsex")
+    private String Tsex;
 
     /**
      * 教师年龄
      */
-    private LocalDate tage;
+    @TableField("Tage")
+    private LocalDate Tage;
 
 
 }

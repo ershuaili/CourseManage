@@ -1,34 +1,42 @@
 package com.coursemanage.entity;
 
-import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-17
+ * @since 2021-05-21
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class User {
+@EqualsAndHashCode(callSuper = false)
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * 用户名
      */
-    private String userName;
+    @TableId("Username")
+    private String Username;
 
     /**
      * 用户密码
      */
-    private String password;
+    @TableField("Password")
+    private String Password;
 
     /**
      * 用户类别
      */
-    private String level;
+    @TableField("Level")
+    private String Level;
+
 
 }

@@ -1,9 +1,9 @@
 package com.coursemanage.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.coursemanage.entity.Student;
 import com.coursemanage.mapper.StudentMapper;
 import com.coursemanage.service.StudentService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author shuai
- * @since 2021-05-20
+ * @since 2021-05-21
  */
 @Service
 public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> implements StudentService {
