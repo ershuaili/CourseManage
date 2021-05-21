@@ -2,7 +2,6 @@ package com.coursemanage.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author shuai
- * @since 2021-05-21
+ * @since 2021-05-20
  */
 @RestController
 @RequestMapping("/teacher")

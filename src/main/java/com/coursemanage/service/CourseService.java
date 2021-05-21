@@ -1,7 +1,7 @@
 package com.coursemanage.service;
 
-import com.coursemanage.entity.Course;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.coursemanage.entity.Course;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author shuai
- * @since 2021-05-21
+ * @since 2021-05-20
  */
 public interface CourseService extends IService<Course> {
 
