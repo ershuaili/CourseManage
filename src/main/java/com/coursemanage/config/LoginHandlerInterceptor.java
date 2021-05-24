@@ -16,7 +16,7 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
         Object user = request.getSession().getAttribute("loginUser");
         //未登录，返回登录页面
         if(user == null){
-            request.setAttribute("msg","您还没有登录，请先登录");
+            request.setAttribute("msg","没有权限，请先登录");
             request.getRequestDispatcher("/index.html").forward(request,response);
             return false;
         }else{

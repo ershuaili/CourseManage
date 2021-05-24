@@ -1,25 +1,25 @@
 package com.coursemanage.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * <p>
- *
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-17
+ * @since 2021-05-22
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class User {
+public class User implements Serializable {
+
+
     /**
      * 用户名
      */
-    private String userName;
+    private String username;
 
     /**
      * 用户密码
@@ -30,5 +30,6 @@ public class User {
      * 用户类别
      */
     private String level;
+
 
 }

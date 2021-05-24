@@ -1,15 +1,13 @@
 package com.coursemanage.service;
 
-import com.coursemanage.entity.User;
-
 /**
- * Created by IntelliJ IDEA.
+ * <p>
+ * 服务类
+ * </p>
  *
- * @author 李二帅
- * @version 1.0
- * @Date 2021/05/20 下午 7:13
+ * @author shuai
+ * @since 2021-05-22
  */
 public interface UserService {
 
-    User queryUserByName(String name);
 }

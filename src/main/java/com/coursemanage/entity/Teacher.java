@@ -1,32 +1,32 @@
 package com.coursemanage.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * <p>
- *
+ * 
  * </p>
  *
  * @author shuai
- * @since 2021-05-17
+ * @since 2021-05-22
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Teacher {
+
+public class Teacher implements Serializable {
 
     /**
      * 教工号
      */
+
     private String tno;
 
     /**
      * 教师姓名
      */
+
     private String tname;
 
     /**

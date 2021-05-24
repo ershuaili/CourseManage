@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author shuai
- * @since 2021-05-20
+ * @since 2021-05-22
  */
 @RestController
 @RequestMapping("/class")

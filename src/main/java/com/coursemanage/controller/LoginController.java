@@ -8,19 +8,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * @author shuai
- */
 @Controller
 public class LoginController {
-
-    @RequestMapping("/user/login")
+    @RequestMapping("/login")
     public String login(
             @RequestParam("username") String username ,
             @RequestParam("password") String password,
             Model model, HttpSession session){
         //具体的业务
-        if(!StringUtils.isEmpty(username) && "123456".equals(password)){
+        if(!StringUtils.isEmpty(username)&&"123456".equals(password)){
             session.setAttribute("loginUser",username);
             return "redirect:/main.html";
         }
@@ -30,7 +26,6 @@ public class LoginController {
             return "index";
         }
     }
-
     @RequestMapping("/user/logout")
     public String logout(HttpSession session){
         session.invalidate();
