@@ -18,7 +18,7 @@ public class LoginController {
         //具体的业务
         if(!StringUtils.isEmpty(username)&&"123456".equals(password)){
             session.setAttribute("loginUser",username);
-            return "redirect:/admin/index.html";
+            return "redirect:/index.html";
         }
         else{
             //告诉用户，你登录失败

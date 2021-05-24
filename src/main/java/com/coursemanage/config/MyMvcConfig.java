@@ -14,11 +14,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
 
+    /**
+     * 用于配置视图名称
+     * @param registry
+     */
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login");
         registry.addViewController("/login.html").setViewName("login");
-        registry.addViewController("/index.html").setViewName("dashboard");
+        registry.addViewController("/index.html").setViewName("admin/index");
     }
 
     /**
