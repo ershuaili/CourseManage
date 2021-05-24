@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
-    @RequestMapping("/login")
+    @RequestMapping("/user/login")
     public String login(
             @RequestParam("username") String username ,
             @RequestParam("password") String password,
@@ -18,14 +18,15 @@ public class LoginController {
         //具体的业务
         if(!StringUtils.isEmpty(username)&&"123456".equals(password)){
             session.setAttribute("loginUser",username);
-            return "redirect:/main.html";
+            return "redirect:/admin/index.html";
         }
         else{
             //告诉用户，你登录失败
             model.addAttribute("msg","用户名或者密码错误！");
-            return "index";
+            return "login";
         }
     }
+
     @RequestMapping("/user/logout")
     public String logout(HttpSession session){
         session.invalidate();
