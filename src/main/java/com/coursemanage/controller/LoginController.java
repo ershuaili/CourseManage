@@ -21,16 +21,16 @@ public class LoginController {
         //具体的业务
         if(!StringUtils.isEmpty(username)&&"123456".equals(password)){
             session.setAttribute("loginUser",username);
-            return "redirect:/index.html";
+            return "redirect:/main";
         }
         else{
             //告诉用户，你登录失败
-            model.addAttribute("error","用户名或者密码错误！");
-            return "login";
+            model.addAttribute("msg","用户名或者密码错误！");
+            return "index";
         }
     }
 
-    @RequestMapping("/logout")
+    @RequestMapping("/user/logout")
     public String logout(HttpSession session){
         session.invalidate();
         return "redirect:/index.html";

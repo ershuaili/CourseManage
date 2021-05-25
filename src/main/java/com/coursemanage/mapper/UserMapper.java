@@ -11,9 +11,9 @@ import org.apache.ibatis.annotations.Mapper;
  * @author shuai
  * @since 2021-05-22
  */
+
 @Mapper
 public interface UserMapper {
-
     /**
      * 根据用户查找用户
      * @param userName
