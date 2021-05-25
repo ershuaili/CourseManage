@@ -1,5 +1,7 @@
 package com.coursemanage.service;
 
+import com.coursemanage.entity.User;
+
 /**
  * <p>
  * 服务类
@@ -10,4 +12,10 @@ package com.coursemanage.service;
  */
 public interface UserService {
 
+    /**
+     * 根据姓名查找学生
+     * @param userName
+     * @return user
+     */
+    User selectUser(String userName);
 }

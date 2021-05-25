@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
+/**
+ * @author shuai
+ */
 @Controller
 public class LoginController {
     @RequestMapping("/user/login")
@@ -22,12 +25,12 @@ public class LoginController {
         }
         else{
             //告诉用户，你登录失败
-            model.addAttribute("msg","用户名或者密码错误！");
+            model.addAttribute("error","用户名或者密码错误！");
             return "login";
         }
     }
 
-    @RequestMapping("/user/logout")
+    @RequestMapping("/logout")
     public String logout(HttpSession session){
         session.invalidate();
         return "redirect:/index.html";
