@@ -1,10 +1,9 @@
 package com.cms.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -15,28 +14,17 @@ import lombok.EqualsAndHashCode;
  * @since 2021-05-26
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
 public class Class implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
     /**
      * 班级号
      */
-    @TableId("Clno")
     private String clno;
-
     /**
      * 班级专业
      */
-    @TableField("Cdiscipline")
     private String cdiscipline;
-
     /**
      * 班级人数
      */
-    @TableField("Cnumber")
     private String cnumber;
-
-
 }
