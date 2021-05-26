@@ -1,8 +1,8 @@
 package com.cms.service.impl;
 
-import com.cms.entity.User;
-import com.cms.mapper.UserMapper;
-import com.cms.service.UserService;
+import com.cms.entity.Sc;
+import com.cms.mapper.ScMapper;
+import com.cms.service.ScService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2021-05-26
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+public class ScServiceImpl extends ServiceImpl<ScMapper, Sc> implements ScService {
 
 }

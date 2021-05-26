@@ -1,6 +1,6 @@
 package com.cms.mapper;
 
-import com.cms.entity.User;
+import com.cms.entity.Student;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author shuai
  * @since 2021-05-26
  */
-public interface UserMapper extends BaseMapper<User> {
+public interface StudentMapper extends BaseMapper<Student> {
 
 }

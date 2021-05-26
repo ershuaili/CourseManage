@@ -16,27 +16,27 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class User implements Serializable {
+public class Class implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户名
+     * 班级号
      */
-    @TableId("Username")
-    private String username;
+    @TableId("Clno")
+    private String clno;
 
     /**
-     * 用户密码
+     * 班级专业
      */
-    @TableField("Password")
-    private String password;
+    @TableField("Cdiscipline")
+    private String cdiscipline;
 
     /**
-     * 用户类别
+     * 班级人数
      */
-    @TableField("Level")
-    private Integer level;
+    @TableField("Cnumber")
+    private String cnumber;
 
 
 }

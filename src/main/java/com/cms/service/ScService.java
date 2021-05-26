@@ -1,6 +1,6 @@
 package com.cms.service;
 
-import com.cms.entity.User;
+import com.cms.entity.Sc;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author shuai
  * @since 2021-05-26
  */
-public interface UserService extends IService<User> {
+public interface ScService extends IService<Sc> {
 
 }

@@ -1,6 +1,5 @@
 package com.cms.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 import lombok.Data;
@@ -16,27 +15,27 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class User implements Serializable {
+public class Sc implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户名
+     * 学号
      */
-    @TableId("Username")
-    private String username;
+    @TableField("Sno")
+    private String sno;
 
     /**
-     * 用户密码
+     * 课程号
      */
-    @TableField("Password")
-    private String password;
+    @TableField("Cno")
+    private String cno;
 
     /**
-     * 用户类别
+     * 成绩
      */
-    @TableField("Level")
-    private Integer level;
+    @TableField("Grader")
+    private Integer grader;
 
 
 }
