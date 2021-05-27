@@ -1,4 +1,7 @@
 package com.cms.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+
 /**
  * <p>
  * Mapper 接口
@@ -7,6 +10,7 @@ package com.cms.mapper;
  * @author shuai
  * @since 2021-05-26
  */
+@Mapper
 public interface StudentMapper {
 
 }

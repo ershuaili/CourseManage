@@ -1,6 +1,9 @@
 package com.cms.service.impl;
 
+import com.cms.entity.User;
+import com.cms.mapper.UserMapper;
 import com.cms.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,5 +16,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public User queryUserByName(String username) {
+        return userMapper.selectUserByName(username);
+    }
 
 }
