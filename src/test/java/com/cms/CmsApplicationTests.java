@@ -2,7 +2,6 @@ package com.cms;
 
 import com.cms.entity.User;
 import com.cms.mapper.UserMapper;
-import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

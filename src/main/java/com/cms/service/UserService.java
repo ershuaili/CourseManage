@@ -13,6 +13,7 @@ import com.cms.entity.User;
 public interface UserService {
     /**
      * 通过用户名获取用户
+     *
      * @param username
      * @return user
      */
