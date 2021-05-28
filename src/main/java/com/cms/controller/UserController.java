@@ -30,7 +30,7 @@ public class UserController {
         User user = userService.queryUserByName(username);
         if (user != null && user.getUsername().equals(username) && user.getPassword().equals(password)) {
             session.setAttribute("msg", "登录成功");
-            return "redirect:/book/home";
+            return "main";
         } else {
             model.addAttribute("loginMsg", "用户名或密码错误");
             return "index";
