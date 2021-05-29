@@ -56,20 +56,20 @@
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<form th:action="@{/emp}" method="post" >
-						<input type="hidden" name="id" th:value="${emp.getId()}">
+						<input type="hidden" name="id" th:value="${stu.getId()}">
 						<div class="form-group" ><label>LastName</label>
-							<input th:value="${emp.getLastName()}" class="form-control" placeholder="kuangshen" type="text" name="lastName">
+							<input th:value="${stu.getLastName()}" class="form-control" placeholder="kuangshen" type="text" name="lastName">
 						</div>
 						<div class="form-group" ><label>Email</label>
-							<input th:value="${emp.getEmail()}" class="form-control" placeholder="24736743@qq.com" type="email" name="email">
+							<input th:value="${stu.getEmail()}" class="form-control" placeholder="24736743@qq.com" type="email" name="email">
 						</div>
 						<div class="form-group"><label>Gender</label><br/>
 							<div class="form-check form-check-inline">
-								<input th:checked="${emp.getGender()==1}" class="form-check-input" name="gender" type="radio" value="1">
+								<input th:checked="${stu.getGender()==1}" class="form-check-input" name="gender" type="radio" value="1">
 								<label class="form-check-label">男</label>
 							</div>
 							<div class="form-check form-check-inline">
-								<input th:checked="${emp.getGender()==0}" class="form-check-input" name="gender" type="radio" value="0">
+								<input th:checked="${stu.getGender()==0}" class="form-check-input" name="gender" type="radio" value="0">
 								<label class="form-check-label">女</label>
 							</div>
 						</div>
