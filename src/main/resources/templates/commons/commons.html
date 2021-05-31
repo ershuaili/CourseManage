@@ -5,9 +5,8 @@
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" th:fragment="topbar">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" th:href="@{/main.html}">图书管理系统</a>
 
-    <span th:text="${username}"></span>你好，
-    <span th:if="${userType}==2">你的权限是教师</span>
-
+    <span th:text="${userName}"></span>你好，
+    <span th:text="${userType==1?'你的权限是教师':'你的权限是学生'}"></span>
 
      <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
