@@ -8,9 +8,6 @@
 </head>
 <body class="text-center">
 <form th:action="@{/user/login}">
-    <span th:text="${#uris}"></span>你好，
-    <span th:if="${#uris}==2">你的权限是教师</span>
-
     <div class="form-group">
         <img class="mb-4" th:src="@{/img/solid.svg}" alt="" width="144" height="144"/>
         <h1 class="h3 mb-3 font-weight-normal">请登录</h1>

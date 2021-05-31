@@ -2,11 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <!--顶部导航栏-->
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0"  th:fragment="topbar">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" href="#">图书管理系统</a>
-    <ul class="navbar-nav px-3">
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" th:fragment="topbar">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" th:href="@{/main.html}">图书管理系统</a>
+     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <a class="nav-link" th:href="@{/main}">退出</a>
+            <a class="nav-link" th:href="@{/index.html}">退出</a>
         </li>
     </ul>
 </nav>
