@@ -41,5 +41,4 @@ public class Student implements Serializable {
      */
     private String clno;
 
-
 }
