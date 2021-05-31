@@ -7,12 +7,16 @@
     <link th:href="@{/css/signin.css}" rel="stylesheet"/>
 </head>
 <body class="text-center">
-<form th:method="get" th:action="@{/user/login}">
+<form th:action="@{/user/login}">
+    <span th:text="${#uris}"></span>你好，
+    <span th:if="${#uris}==2">你的权限是教师</span>
+
     <div class="form-group">
         <img class="mb-4" th:src="@{/img/solid.svg}" alt="" width="144" height="144"/>
         <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
+        <!--提示登录错误信息-->
+        <p style="color: red" th:text="${msg}"></p>
 
-        <p style="color: red" th:text="${loginMsg}"></p>
         <label class="sr-only">账号</label>
         <input th:type="text" th:name="username" class="form-control" placeholder="请输入账号" style="width: 300px"/>
 

@@ -16,9 +16,9 @@ import java.util.List;
  */
 @Mapper
 public interface UserMapper {
+
     /**
      * 根据用户名查询用户信息
-     *
      * @param username
      * @return user
      */
@@ -26,8 +26,14 @@ public interface UserMapper {
 
     /**
      * 获取所有用户
-     *
-     * @return
+     * @return list
      */
     List<User> getUserList();
+
+    /**
+     * 查找账号权限码
+     * @param username
+     * @return int
+     */
+    int getAuthority(String username);
 }

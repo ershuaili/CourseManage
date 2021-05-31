@@ -1,6 +1,5 @@
 package com.cms.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -22,13 +21,12 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index.html").setViewName("index");
         registry.addViewController("/main.html").setViewName("main");
-        registry.addViewController("/list.html").setViewName("/admin/list");
+        registry.addViewController("/stu.html").setViewName("/admin/list");
     }
 
     /**
      * 添加拦截器组件
      */
-
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 注册拦截器，及拦截请求和要剔除哪些请求!

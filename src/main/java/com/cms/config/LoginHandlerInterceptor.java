@@ -1,14 +1,18 @@
 package com.cms.config;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * 自定义拦截器
+ * @author shuai
  */
 public class LoginHandlerInterceptor implements HandlerInterceptor {
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //获取 loginUser 信息进行判断
@@ -23,4 +27,5 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
             return true;
         }
     }
+
 }
