@@ -58,9 +58,21 @@
 						<div class="col-md-2"></div>
 						<div class="col-md-8">
 							<table class="table table-bordered">
-								<tr th:each="stu:${stus}">
+								<tr>
 									<td>
-										<span>学号：</span> <span th:text="${stu.getSname()}"></span>
+										<span>学号：</span> <span th:text="${stu.getSno()}"></span>
+									</td>
+									<td>
+										<span>姓名：</span> <span th:text="${stu.getSname()}"></span>
+									</td>
+									<td>
+										<span>性别：</span> <span th:text="${stu.getSsex()}"></span>
+									</td>
+									<td>
+										<span>年龄：</span> <span th:text="${stu.getSage()}"></span>
+									</td>
+									<td>
+										<span>班级：</span> <span th:text="${stu.getClno()}"></span>
 									</td>
 								</tr>
 							</table>
