@@ -5,10 +5,12 @@
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" th:fragment="topbar">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" th:href="@{/main.html}">图书管理系统</a>
 
-    <span th:text="${userName}"></span>你好，
-    <span th:text="${userType==1?'你的权限是教师':'你的权限是学生'}"></span>
+    <h3>
+        <span th:text="${session.loginUser}"></span> 你好，
+        <span th:text="${session.userType==1?'你的权限是教师':'你的权限是学生'}"></span>
+    </h3>
 
-     <ul class="navbar-nav px-3">
+    <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
             <a class="nav-link" th:href="@{/index.html}">退出</a>
         </li>
@@ -20,7 +22,7 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/stu.html}" >
+                <a class="nav-link" th:href="@{/list}" >
                     个人信息
                 </a>
             </li>

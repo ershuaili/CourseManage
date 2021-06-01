@@ -1,14 +1,13 @@
 package com.cms.controller;
 
-
 import com.cms.entity.Student;
-import com.cms.service.impl.StudentServiceImpl;
+import com.cms.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
+import java.util.Collection;
 
 /**
  * <p>
@@ -22,15 +21,20 @@ import java.util.List;
 public class StudentController {
 
     @Autowired
-    StudentServiceImpl studentService;
+    private StudentMapper studentMapper;
 
     /**
      * 查询学生个人信息
      */
     @RequestMapping(value = "/list")
-    public String list(Model model){
-        List<Student> students = studentService.selectAllStu();
+    public String list(Model model) {
+        Collection<Student> students = studentMapper.selectAllStu();
         model.addAttribute("stus",students);
+
+        for (Student student : students) {
+            System.out.println(student);
+        }
+
         return "admin/list";
     }
 }

@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
-
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 	<head>
@@ -55,49 +53,16 @@
 				<div th:replace="~{commons/commons::sidebar(active='list.html')}"></div>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h1>你好欢迎使用课程管理系统</h1>
-					<h1>hello</h1>
+					<h1>个人信息</h1>
 					<div class="row">
 						<div class="col-md-2"></div>
 						<div class="col-md-8">
 							<table class="table table-bordered">
-								<thead>
-								<tr>
-									<th>学号</th>
-									<th>姓名</th>
-									<th>性别</th>
-									<th>出生时间</th>
-									<th>班级号</th>
-								</tr>
-								</thead>
-								<tbody>
 								<tr th:each="stu:${stus}">
-									<td th:text="${stu.getSno()}"></td>
-									<td th:text="${stu.getSname()}"></td>
-									<td th:text="${stu.getSsex()()==0?'女':'男'}"></td>
-									<td th:text="${#dates.format(stu.getSage(),'yyyy-MM-dd HH:mm:ss')}"></td>
-									<td th:text="${stu.getClno()}"></td>
+									<td>
+										<span>学号：</span> <span th:text="${stu.getSname()}"></span>
+									</td>
 								</tr>
-								</tbody>
-<!--								<tr th:each="stu:${stus}">-->
-<!--									<td>-->
-<!--										<span>学号：</span><span th:text="${stu.getSno()}"></span>-->
-<!--									</td>-->
-<!--									<td>-->
-<!--										<span>生日：</span><span th:text="${stu.getSage()}"></span>-->
-<!--									</td>-->
-<!--									<td>-->
-<!--										<span>姓名：</span><span th:text="${stu.getSname()}"></span>-->
-<!--									</td>-->
-<!--									<td>-->
-<!--										<span>性别：</span>-->
-<!--										<span th:if="${stu.getSsex()} == 1">男</span>-->
-<!--										<span th:if="${stu.getSsex()} == 2">女</span>-->
-<!--									</td>-->
-<!--									<td>-->
-<!--										<span>班级号：</span><span th:text="${stu.getClno()}"></span>-->
-<!--									</td>-->
-<!--								</tr>-->
 							</table>
 						</div>
 						<div class="col-md-2"></div>
