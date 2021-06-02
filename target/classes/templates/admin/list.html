@@ -60,19 +60,19 @@
 							<table class="table table-bordered">
 								<tr>
 									<td>
-										<span>学号：</span> <span th:text="${stu.getSno()}"></span><br>
+										<span>学号：</span> <span th:text="${stu.getSno()}"></span>
 									</td>
 									<td>
-										<span>姓名：</span> <span th:text="${stu.getSname()}"></span><br>
+										<span>姓名：</span> <span th:text="${stu.getSname()}"></span>
 									</td>
 									<td>
-										<span>性别：</span> <span th:text="${stu.getSsex()}"></span><br>
+										<span>性别：</span> <span th:text="${stu.getSsex()==0?'女':'男'}"></span>
 									</td>
 									<td>
-										<span>年龄：</span> <span th:text="${stu.getSage()}"></span><br>
+										<span>出生时间：</span> <span th:text="${stu.getSage()}"></span>
 									</td>
 									<td>
-										<span>班级：</span> <span th:text="${stu.getClno()}"></span><br>
+										<span>班级：</span> <span th:text="${stu.getClno()}"></span>
 									</td>
 								</tr>
 							</table>

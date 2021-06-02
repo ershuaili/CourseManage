@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
-import java.util.Collection;
 
 /**
  * <p>
@@ -34,6 +33,6 @@ public class StudentController {
 //        查用户封存到stu中
         Student student = studentMapper.selectStu(stuNo);
         model.addAttribute("stu",student);
-        return "admin/list";
+        return "user";
     }
 }
