@@ -2,7 +2,8 @@ package com.cms.controller;
 
 
 import com.cms.entity.Student;
-import com.cms.mapper.StudentMapper;
+import com.cms.entity.Teacher;
+import com.cms.mapper.TeacherMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,21 +20,21 @@ import javax.servlet.http.HttpSession;
  * @since 2021-05-26
  */
 @Controller
-public class StudentController {
+public class TeacherController {
 
     @Autowired
-    private StudentMapper studentMapper;
+    private TeacherMapper teacherMapper;
 
     /**
-     * 查询学生个人信息
+     * 查询教师个人信息
      */
-    @RequestMapping(value = "/main")
-    public String list(Model model,HttpSession session) {
+    @RequestMapping(value = "/mainT")
+    public String list(Model model, HttpSession session) {
 //        获取登录名
-        String stuNo = (String) session.getAttribute("loginUser");
+        String teaNo = (String) session.getAttribute("loginUser");
 //        查用户封存到stu中
-        Student student = studentMapper.selectStu(stuNo);
-        model.addAttribute("stu",student);
+        Teacher teacher = teacherMapper.selectTea(teaNo);
+        model.addAttribute("tea",teacher);
         return "main";
     }
 }

@@ -6,7 +6,7 @@
     <a class="navbar-brand col-sm-3 col-md-2 mr-0 text-center" th:href="@{/main.html}">图书管理系统</a>
 
     <h3>
-        <span th:text="${session.loginUser}"></span> 你好，
+        <span style="color: rosybrown" th:text="${session.loginUser}"></span> 你好，
         <span th:text="${session.userType==1?'你的权限是教师':'你的权限是学生'}"></span>
     </h3>
 

@@ -39,17 +39,11 @@ public class UserController {
             session.setAttribute("userType", authority);
             //权限码
             model.addAttribute("userType", authority);
-            return "redirect:/main.html";
+            return "redirect:/main";
         } else {
             model.addAttribute("msg", "用户名或密码错误");
             return "index";
         }
-    }
-
-    @RequestMapping("/user/logout")
-    public String logout(HttpSession session) {
-        session.invalidate();
-        return "redirect:/index.html";
     }
 }
 
