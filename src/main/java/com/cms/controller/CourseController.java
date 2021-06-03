@@ -1,7 +1,10 @@
 package com.cms.controller;
 
 
+import com.cms.mapper.CourseMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * <p>
@@ -14,4 +17,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class CourseController {
 
+    @Autowired
+    CourseMapper courseMapper;
+
+    @RequestMapping(value = "/courseManage")
+    public String selectAllCourse(){
+        return "redirect:/courseManage.html";
+    }
 }

@@ -7,4 +7,5 @@
         from teacher
         where Tno = #{teaNo}
     </select>
+
 </mapper>

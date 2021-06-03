@@ -19,9 +19,9 @@ public class StudentController {
 
     @Autowired
     StudentMapper studentMapper;
+
     @RequestMapping(value = "/studentManage")
     public String selectAllStu(){
-
         return "redirect:/studentManage.html";
     }
 }
