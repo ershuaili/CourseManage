@@ -12,7 +12,9 @@
     </select>
 
     <select id="getAuthority" resultType="int">
-        select Level from user where Username = #{username}
+        select Level
+        from user
+        where Username = #{username}
     </select>
 
 </mapper>
