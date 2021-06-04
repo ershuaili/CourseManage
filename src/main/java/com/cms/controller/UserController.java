@@ -29,19 +29,20 @@ public class UserController {
     @Autowired
     private UserService userService;
     @Autowired
-    TeacherMapper teacherMapper;
+    private TeacherMapper teacherMapper;
     @Autowired
-    StudentMapper studentMapper;
+    private StudentMapper studentMapper;
 
     /**
      * 用户登录验证
-     * @param username
-     * @param password
+     *
+     * @param username 用户名
+     * @param password 用户密码
      * @param model
      * @param session
      * @return main
      */
-    @RequestMapping("/user/login")
+    @RequestMapping("/login")
     public String queryUserByName(
             @RequestParam("username") String username,
             @RequestParam("password") String password,
@@ -85,6 +86,5 @@ public class UserController {
         }
         return "main";
     }
-
 }
 

@@ -25,12 +25,6 @@ public interface UserMapper {
     User selectUserByName(@Param("username") String username);
 
     /**
-     * 获取所有用户
-     * @return list
-     */
-    List<User> getUserList();
-
-    /**
      * 查找账号权限码
      * @param username
      * @return int

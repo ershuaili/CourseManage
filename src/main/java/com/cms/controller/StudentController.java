@@ -1,10 +1,14 @@
 package com.cms.controller;
 
 
+import com.cms.entity.Student;
 import com.cms.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 /**
  * <p>
@@ -18,10 +22,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StudentController {
 
     @Autowired
-    StudentMapper studentMapper;
+    private StudentMapper studentMapper;
 
     @RequestMapping(value = "/studentManage")
-    public String selectAllStu(){
-        return "redirect:/studentManage.html";
+    public String selectAllStu(Model model) {
+        List<Student> students = studentMapper.selectAllStu();
+
+        model.addAttribute("stus", students);
+
+        return "/admin/studentManage";
     }
+
 }

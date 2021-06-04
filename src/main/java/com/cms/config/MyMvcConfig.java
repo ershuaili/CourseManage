@@ -35,6 +35,6 @@ public class MyMvcConfig implements WebMvcConfigurer {
         // 我们还需要过滤静态资源文件，否则样式显示不出来
         registry.addInterceptor(new LoginHandlerInterceptor())
                 .addPathPatterns("/**")
-                .excludePathPatterns("/index.html","/user/login","/","/css/*","/img/**","/js/**");
+                .excludePathPatterns("/index.html","/login","/","/css/*","/img/**","/js/**");
     }
 }

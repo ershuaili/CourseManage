@@ -2,4 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cms.mapper.ScMapper">
 
+    <select id="selectScList" resultType="Sc">
+        SELECT Sname, Cname, Grader
+        FROM sc,
+             student,
+             course
+        WHERE sc.Cno = course.Cno
+          AND sc.Sno = student.Sno
+    </select>
+
 </mapper>
