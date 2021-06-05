@@ -6,6 +6,7 @@
         select *
         from course
     </select>
+
     <!--插入一个课程-->
     <insert id="insertCourse" parameterType="Course">
         insert into course(Cno, Cname, Cteacher, Ccredit) VALUES (#{cno},#{cname},#{cteacher},#{ccredit})

@@ -14,8 +14,14 @@ import java.util.List;
  */
 public interface ScService {
     /**
-     * 通过课程号查询课程名
+     * 查询课程号和课程名，学号
      * @return scList
      */
     List<Sc> selectScList();
+
+    /**
+     * 查询所有课程信息
+     * @return Cname
+     */
+    List<String> getCname();
 }

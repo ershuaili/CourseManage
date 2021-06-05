@@ -30,4 +30,9 @@ public class ScServiceImpl implements ScService {
     public List<Sc> selectScList() {
         return scMapper.selectScList();
     }
+
+    @Override
+    public List<String> getCname() {
+        return null;
+    }
 }

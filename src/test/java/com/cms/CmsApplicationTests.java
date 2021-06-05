@@ -1,21 +1,36 @@
 package com.cms;
 
-import com.cms.entity.Student;
-import com.cms.mapper.StudentMapper;
+import com.cms.entity.Course;
+import com.cms.mapper.CourseMapper;
+import com.cms.mapper.ScMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @SpringBootTest
 class CmsApplicationTests {
 
     @Autowired
-    StudentMapper studentMapper;
+    ScMapper scMapper;
 
     @Test
-    public void toTest(){
-        Student student = studentMapper.selectStu("1");
-        System.out.println(student.getSname());
+    public void toTest() {
+        List<String> sc = scMapper.getCname();
+        System.out.println(sc);
+    }
+
+
+    @Autowired
+    CourseMapper courseMapper;
+
+    @Test
+    public void myTest() {
+        List<Course> courses = courseMapper.selectCourseList();
+        for (Course course : courses) {
+            System.out.println(course.getCname());
+        }
     }
 
 }

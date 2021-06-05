@@ -57,9 +57,8 @@
                     <thead>
                     <tr>
                         <th>课程名</th>
-                        <th th:each="sc:${scs}" th:text="${sc.getGrader()}"></th>
+                        <th th:each="sc:${course}" th:text="${sc.getCno()}"></th>
                     </tr>
-
                     </thead>
 
                     <tbody>

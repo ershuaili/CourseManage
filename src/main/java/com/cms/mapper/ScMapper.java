@@ -17,8 +17,15 @@ import java.util.List;
 public interface ScMapper {
 
     /**
-     * 通过课程号查询课程名
+     * 查询学生成绩
      * @return scList
      */
     List<Sc> selectScList();
+
+    /**
+     * 查询所有课程信息
+     * @return Cname
+     */
+    List<String> getCname();
+
 }
