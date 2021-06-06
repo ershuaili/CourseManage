@@ -32,6 +32,11 @@ public class CourseServiceImpl implements CourseService {
         return courseMapper.selectCourseList();
     }
 
+    @Override
+    public List<String> selectCname() {
+        return courseMapper.selectCname();
+    }
+
     /**
      * 插入课程信息
      * @param course 课程

@@ -1,8 +1,9 @@
 package com.cms;
 
 import com.cms.entity.Course;
+import com.cms.entity.Scg;
 import com.cms.mapper.CourseMapper;
-import com.cms.mapper.ScMapper;
+import com.cms.mapper.ScgMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,12 +14,14 @@ import java.util.List;
 class CmsApplicationTests {
 
     @Autowired
-    ScMapper scMapper;
+    ScgMapper scgMapper;
 
     @Test
     public void toTest() {
-        List<String> sc = scMapper.getCname();
-        System.out.println(sc);
+        List<String> strings = scgMapper.selectCname();
+        for (String string : strings) {
+            System.out.println(string);
+        }
     }
 
 

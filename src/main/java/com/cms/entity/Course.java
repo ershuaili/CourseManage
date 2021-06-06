@@ -39,5 +39,4 @@ public class Course implements Serializable {
      */
     private String ccredit;
 
-
 }

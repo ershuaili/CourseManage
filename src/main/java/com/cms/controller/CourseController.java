@@ -30,4 +30,5 @@ public class CourseController {
         model.addAttribute("courses", courses);
         return "/admin/courseManage";
     }
+
 }

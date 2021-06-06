@@ -24,4 +24,10 @@ public interface CourseService {
      * @return courseList
      */
     List<Course> selectCourseList();
+
+    /**
+     * 查询所有课程名
+     * @return cName
+     */
+    List<String> selectCname();
 }

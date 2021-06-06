@@ -1,6 +1,7 @@
 package com.cms.mapper;
 
 import com.cms.entity.Course;
+import com.cms.entity.Scg;
 import com.cms.entity.Student;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.cglib.core.ClassInfo;
@@ -28,5 +29,11 @@ public interface CourseMapper {
      * @param course 课程号
      */
     void insertCourse(Course course);
+
+    /**
+     * 查询所有课程名
+     * @return cName
+     */
+    List<String> selectCname();
 
 }

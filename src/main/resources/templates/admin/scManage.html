@@ -13,6 +13,8 @@
 
     <!-- Custom styles for this template -->
     <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+    <!--自定义图标-->
+    <link rel="shortcut icon" th:href="@{/img/solid.svg}" />
     <style type="text/css">
         /* Chart.js */
 
@@ -56,15 +58,17 @@
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
+                        <th>姓名</th>
                         <th>课程名</th>
-                        <th th:each="sc:${course}" th:text="${sc.getCno()}"></th>
+                        <th>学分</th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    <tr th:each="sc:${scs}">
-                        <td th:text="${sc.getSno()}"></td>
-                        <td th:text="${sc.getGrader()}"></td>
+                    <tr th:each="scg:${scgs}">
+                        <td th:text="${scg.getSname()}"></td>
+                        <td th:text="${scg.getCname()}"></td>
+                        <td th:text="${scg.getGrader()}"></td>
                         <td>
                             <a class="btn btn-sm btn-primary">编辑</a>
                             <a class="btn btn-sm btn-danger">删除</a>

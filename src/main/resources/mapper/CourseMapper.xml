@@ -12,4 +12,9 @@
         insert into course(Cno, Cname, Cteacher, Ccredit) VALUES (#{cno},#{cname},#{cteacher},#{ccredit})
     </insert>
 
+    <!--查询课程名-->
+    <select id="selectCname" resultType="Course">
+        select Cname from course
+    </select>
+
 </mapper>
