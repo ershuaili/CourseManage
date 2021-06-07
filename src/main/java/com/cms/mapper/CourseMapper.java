@@ -1,10 +1,7 @@
 package com.cms.mapper;
 
 import com.cms.entity.Course;
-import com.cms.entity.Scg;
-import com.cms.entity.Student;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.cglib.core.ClassInfo;
 
 import java.util.List;
 
