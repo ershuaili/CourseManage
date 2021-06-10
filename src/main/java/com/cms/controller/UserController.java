@@ -6,6 +6,8 @@ import com.cms.entity.Teacher;
 import com.cms.entity.User;
 import com.cms.mapper.StudentMapper;
 import com.cms.mapper.TeacherMapper;
+import com.cms.service.StudentService;
+import com.cms.service.TeacherService;
 import com.cms.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,9 +31,9 @@ public class UserController {
     @Autowired
     private UserService userService;
     @Autowired
-    private TeacherMapper teacherMapper;
+    private TeacherService teacherService;
     @Autowired
-    private StudentMapper studentMapper;
+    private StudentService studentService;
 
     /**
      * 用户登录验证
@@ -77,11 +79,11 @@ public class UserController {
 
         if (userType == 0) {
             //        查用户封存到stu中
-            Student student = studentMapper.selectStu(name);
+            Student student = studentService.selectStu(name);
             model.addAttribute("stu", student);
         } else {
             //        查用户封存到tea中
-            Teacher teacher = teacherMapper.selectTea(name);
+            Teacher teacher = teacherService.selectTea(name);
             model.addAttribute("tea", teacher);
         }
         return "main";
