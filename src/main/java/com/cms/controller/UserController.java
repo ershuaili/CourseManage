@@ -52,6 +52,7 @@ public class UserController {
         User user = userService.queryUserByName(username);
         if (user != null && user.getUsername().equals(username) && user.getPassword().equals(password)) {
             session.setAttribute("loginUser", username);
+
             //用户名
             model.addAttribute("userName", username);
             Integer authority = userService.getAuthority(username);
