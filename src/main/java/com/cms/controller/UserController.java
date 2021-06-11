@@ -4,8 +4,6 @@ package com.cms.controller;
 import com.cms.entity.Student;
 import com.cms.entity.Teacher;
 import com.cms.entity.User;
-import com.cms.mapper.StudentMapper;
-import com.cms.mapper.TeacherMapper;
 import com.cms.service.StudentService;
 import com.cms.service.TeacherService;
 import com.cms.service.UserService;
@@ -40,8 +38,8 @@ public class UserController {
      *
      * @param username 用户名
      * @param password 用户密码
-     * @param model
-     * @param session
+     * @param model model
+     * @param session session
      * @return main
      */
     @RequestMapping("/login")
@@ -68,8 +66,8 @@ public class UserController {
 
     /**
      * 获取用户信息
-     * @param model
-     * @param session
+     * @param model model
+     * @param session session
      * @return main
      */
     @RequestMapping(value = "/main")
