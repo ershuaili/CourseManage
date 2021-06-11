@@ -1,7 +1,6 @@
 package com.cms;
 
 import com.cms.entity.Course;
-import com.cms.entity.Scg;
 import com.cms.mapper.CourseMapper;
 import com.cms.mapper.ScgMapper;
 import org.junit.jupiter.api.Test;
