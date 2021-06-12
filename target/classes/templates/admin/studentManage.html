@@ -78,8 +78,8 @@
                             <td th:text="${stu.getClno()}"></td>
 
                             <td>
-                                <a class="btn btn-sm btn-primary">编辑</a>
-                                <a class="btn btn-sm btn-danger">删除</a>
+                                <a class="btn btn-sm btn-primary" th:href="@{/stu/{id}(id=${stu.getSno()})}">编辑</a>
+                                <a class="btn btn-sm btn-danger" th:href="@{/stu/{id}(id=${stu.getSno()})}">删除</a>
                             </td>
                         </tr>
                         </tbody>

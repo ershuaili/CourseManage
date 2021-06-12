@@ -1,6 +1,8 @@
 package com.cms;
 
+import com.cms.entity.Class;
 import com.cms.entity.Course;
+import com.cms.mapper.ClassMapper;
 import com.cms.mapper.CourseMapper;
 import com.cms.mapper.ScgMapper;
 import org.junit.jupiter.api.Test;
@@ -35,4 +37,14 @@ class CmsApplicationTests {
         }
     }
 
+    @Autowired
+    ClassMapper classMapper;
+
+    @Test
+    public void myTestClass(){
+        List<Class> classes = classMapper.selectAllClass();
+        for (Class aClass : classes) {
+            System.out.println(aClass);
+        }
+    }
 }

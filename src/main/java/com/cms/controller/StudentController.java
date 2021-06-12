@@ -1,13 +1,16 @@
 package com.cms.controller;
 
 
+import com.cms.entity.Class;
 import com.cms.entity.Student;
+import com.cms.mapper.ClassMapper;
 import com.cms.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -25,6 +28,8 @@ public class StudentController {
 
     @Autowired
     private StudentMapper studentMapper;
+    @Autowired
+    private ClassMapper classMapper;
 
     @RequestMapping(value = "/studentManage")
     public String selectAllStu(Model model) {
@@ -43,6 +48,13 @@ public class StudentController {
         //查出来原来的数据
         Student student = studentMapper.selectStu(id);
         model.addAttribute("stu", student);
+
+        List<Class> classes = classMapper.selectAllClass();
+        model.addAttribute("class",classes);
         return "admin/update";
     }
+
+//    @PostMapping("/")
+//    public String update(Class class);
+
 }

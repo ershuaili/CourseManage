@@ -19,6 +19,11 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Class implements Serializable {
+
+    /**
+     * 班级名字
+     */
+    private String cname;
     /**
      * 班级号
      */

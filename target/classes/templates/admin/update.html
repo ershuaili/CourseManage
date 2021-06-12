@@ -73,14 +73,15 @@
           </div>
         </div>
 
-        <div class="form-group"><label>班级编号</label>
+        <div class="form-group" ><label>班级编号</label>
           <select class="form-control" name="department.id">
-            <option th:each="cla:${class}" th:text="${cla.getCname()}" th:value="${cla.getCname()}"></option>
+            <option th:each="cla:${class}" th:text="${cla.getCname()}"
+                    th:value="${cla.getCname()}"></option>
           </select>
         </div>
 
-        <div class="form-group">
-          <label>出生时间</label>
+        <div class="form-group" >
+          <label >出生时间</label>
           <input th:value="${stu.getSage()}" class="form-control" placeholder="2021-02-02" type="text" name="birth">
         </div>
 
