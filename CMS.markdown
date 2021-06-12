@@ -20,24 +20,24 @@ HTML
 
 项目
 
-![img](img/img.png)
+![img](public/img/img.png)
 
 登录
 
-![img_1](img/img_1.png)
+![img_1](public/img/img_1.png)
 
 个人信息
 
-![img_2](img/img_2.png)
+![img_2](public/img/img_2.png)
 
 学生管理  
 
-![img_3](img/img_3.png)
+![img_3](public/img/img_3.png)
 
 课程管理 
 
-![img_4](img/img_4.png)
+![img_4](public/img/img_4.png)
 
 成绩管理
 
-![img_5](img/img_5.png)
+![img_5](public/img/img_5.png)
