@@ -6,6 +6,8 @@ import com.cms.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -33,4 +35,14 @@ public class StudentController {
         return "/admin/studentManage";
     }
 
+    /**
+     * 转跳至学生修改界面
+     */
+    @GetMapping("/stu/{id}")
+    public String toStudentUpdate(@PathVariable String id ,Model model){
+        //查出来原来的数据
+        Student student = studentMapper.selectStu(id);
+        model.addAttribute("stu", student);
+        return "admin/update";
+    }
 }
