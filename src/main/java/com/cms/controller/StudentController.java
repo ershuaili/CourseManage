@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -34,9 +33,7 @@ public class StudentController {
     @RequestMapping(value = "/studentManage")
     public String selectAllStu(Model model) {
         List<Student> students = studentMapper.selectAllStu();
-
         model.addAttribute("stus", students);
-
         return "/admin/studentManage";
     }
 
@@ -49,6 +46,7 @@ public class StudentController {
         Student student = studentMapper.selectStu(id);
         model.addAttribute("stu", student);
 
+        //查出班级信息
         List<Class> classes = classMapper.selectAllClass();
         model.addAttribute("class",classes);
         return "admin/update";
