@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="c95bc604-7cd3-4487-a68b-f85ddea9f9b3" name="腾讯云">
+      <webServer id="2c808676-28af-4cbb-8ca9-ab2481aff21c" name="腾讯云">
         <fileTransfer accessType="SFTP" host="212.129.153.201" port="22" sshConfigId="0a631026-5f18-43c6-a5a7-046b2748624f" sshConfig="root@212.129.153.201:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
