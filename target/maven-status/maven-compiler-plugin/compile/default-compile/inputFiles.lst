@@ -1,6 +1,7 @@
 E:\Java\CMS\src\main\java\com\cms\mapper\CourseMapper.java
 E:\Java\CMS\src\main\java\com\cms\service\CourseService.java
 E:\Java\CMS\src\main\java\com\cms\entity\Course.java
+E:\Java\CMS\src\main\java\com\cms\mapper\ClassMapper.java
 E:\Java\CMS\src\main\java\com\cms\service\impl\CourseServiceImpl.java
 E:\Java\CMS\src\main\java\com\cms\controller\StudentController.java
 E:\Java\CMS\src\main\java\com\cms\entity\Teacher.java
@@ -18,6 +19,7 @@ E:\Java\CMS\src\main\java\com\cms\service\StudentService.java
 E:\Java\CMS\src\main\java\com\cms\mapper\StudentMapper.java
 E:\Java\CMS\src\main\java\com\cms\config\LoginHandlerInterceptor.java
 E:\Java\CMS\src\main\java\com\cms\mapper\UserMapper.java
+E:\Java\CMS\src\main\java\com\cms\service\impl\ClassServiceImpl.java
 E:\Java\CMS\src\main\java\com\cms\entity\Class.java
 E:\Java\CMS\src\main\java\com\cms\service\ScgService.java
 E:\Java\CMS\src\main\java\com\cms\entity\Student.java
@@ -25,4 +27,5 @@ E:\Java\CMS\src\main\java\com\cms\service\impl\StudentServiceImpl.java
 E:\Java\CMS\src\main\java\com\cms\service\TeacherService.java
 E:\Java\CMS\src\main\java\com\cms\entity\User.java
 E:\Java\CMS\src\main\java\com\cms\entity\Scg.java
+E:\Java\CMS\src\main\java\com\cms\service\ClassServices.java
 E:\Java\CMS\src\main\java\com\cms\service\UserService.java

@@ -7,11 +7,14 @@ com\cms\service\ScgService.class
 com\cms\config\LoginHandlerInterceptor.class
 com\cms\entity\Teacher.class
 com\cms\entity\User.class
+com\cms\mapper\ClassMapper.class
 com\cms\mapper\StudentMapper.class
 com\cms\entity\Class.class
 com\cms\entity\Student.class
+com\cms\service\impl\ClassServiceImpl.class
 com\cms\controller\ScgController.class
 com\cms\service\CourseService.class
+com\cms\service\ClassServices.class
 com\cms\mapper\CourseMapper.class
 com\cms\service\impl\ScgServiceImpl.class
 com\cms\entity\Course.class

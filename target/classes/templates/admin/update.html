@@ -55,7 +55,7 @@
         <input type="hidden" name="id" th:value="${stu.getSno()}">
 
         <div class="form-group" ><label>姓名</label>
-          <input th:value="${stu.getSname()}" class="form-control" placeholder="shuai" type="text" name="lastName">
+          <input class="form-control" name="lastName" placeholder="shuai" th:value="${stu.getSname()}" type="text">
         </div>
 
         <div class="form-group"><label>性别</label><br/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="腾讯云" uploadOnCheckin="c95bc604-7cd3-4487-a68b-f85ddea9f9b3" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="腾讯云" persistUploadOnCheckin="false" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="腾讯云">
         <serverdata>
@@ -10,6 +10,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myUploadOnCheckinName" value="腾讯云" />
   </component>
 </project>
