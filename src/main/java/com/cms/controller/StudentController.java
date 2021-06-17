@@ -34,7 +34,7 @@ public class StudentController {
     public String selectAllStu(Model model) {
         List<Student> students = studentMapper.selectAllStu();
         model.addAttribute("stus", students);
-        return "/admin/studentManage";
+        return "redirect:/admin/studentManage";
     }
 
     /**
@@ -49,7 +49,7 @@ public class StudentController {
         //查出班级信息
         List<Class> classes = classMapper.selectAllClass();
         model.addAttribute("class",classes);
-        return "admin/update";
+        return "redirect:/admin/update";
     }
 
 //    @PostMapping("/")

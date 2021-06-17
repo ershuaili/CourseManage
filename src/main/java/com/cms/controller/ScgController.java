@@ -30,7 +30,7 @@ public class ScgController {
         List<String> strings = scgMapper.selectCname();
         model.addAttribute("scgs", scgs);
         model.addAttribute("cnames", strings);
-        return "/admin/scManage";
+        return "redirect:/admin/scManage";
     }
 
 }
