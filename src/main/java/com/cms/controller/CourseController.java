@@ -28,7 +28,7 @@ public class CourseController {
     public String selectAllCourse(Model model) {
         List<Course> courses = courseMapper.selectCourseList();
         model.addAttribute("courses", courses);
-        return "redirect:/admin/courseManage";
+        return "admin/courseManage";
     }
 
 }
