@@ -51,8 +51,4 @@ public class StudentController {
         model.addAttribute("class",classes);
         return "admin/update";
     }
-
-//    @PostMapping("/")
-//    public String update(Class class);
-
 }
